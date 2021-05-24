@@ -1,0 +1,35 @@
+.wrapInputSearch {
+  border-radius: 6px;
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid var(--colorText);
+}
+.inputSearch {
+  border: none;
+  color: var(--colorText);
+  background-color: var(--colorBackgroungItems);
+}
+.inputSearch::-webkit-input-placeholder {
+  color: var(--colorText);
+}
+.inputSearch:focus {
+  outline: none;
+}
+.fa-search {
+  padding: 0 7px;
+  color: var(--colorText);
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapInputSearch {
+    width: 20%;
+    position: absolute;
+    top: 30px;
+    left: 250px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .wrapInputSearch {
+    width: 50%;
+  }
+}

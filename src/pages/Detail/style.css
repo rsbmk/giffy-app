@@ -1,0 +1,9 @@
+.titleGifDetail {
+  color: var(--colorText);
+  margin-bottom: 10px;
+}
+.containerGifDetali {
+  width: 70vw;
+  height: 60vh;
+  margin: 0 auto;
+}

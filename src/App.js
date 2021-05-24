@@ -8,9 +8,9 @@ import DetailGif from "./pages/Detail";
 function App() {
   return (
     <GifsContextProvider>
-      <Route path="/" component={Home} />
-      <Route path="/gifs/:keyword" component={SearchResults} />
-      <Route path="/gifs/detail/:id" component={DetailGif} />
+      <Route path="/giffy-app/" component={Home} />
+      <Route path="/giffy-app/gifs/:keyword" component={SearchResults} />
+      <Route path="/giffy-app/gifs/detail/:id" component={DetailGif} />
     </GifsContextProvider>
   );
 }

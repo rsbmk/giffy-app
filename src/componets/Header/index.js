@@ -15,7 +15,7 @@ export function Header() {
   return (
     <div className="containerHeader">
       <div className="wrapTitle-DarkMode">
-        <Link className="title" to="/">
+        <Link className="title" to="/giffy-app/">
           Giffy
         </Link>
         <div className="wrapDarkMode" onClick={handleClick}>

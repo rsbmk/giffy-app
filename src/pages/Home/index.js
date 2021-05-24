@@ -9,9 +9,6 @@ export function Home() {
     <div className="wrpaHome">
       <Header />
       <GifList title="trending" url={URL_API_TRENDING} />
-      {/* <GifList title="Drake" keyword="drake" />
-      <GifList title="Lebron James" keyword="LebronJames" />
-      <GifList title="NBA" keyword="nba" /> */}
     </div>
   );
 }

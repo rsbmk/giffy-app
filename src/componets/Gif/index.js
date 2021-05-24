@@ -4,7 +4,7 @@ import "./styles.css";
 
 export function Gif({ title, url, id }) {
   return (
-    <Link to={`/gifs/detail/${id}`}>
+    <Link to={`/giffy-app/gifs/detail/${id}`}>
       <div className="wrapImgGif">
         <img className="imgGif" loading="lazy" src={url} alt={title} />
       </div>

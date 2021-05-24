@@ -12,7 +12,7 @@ export default function Search() {
   };
   const handleSumbit = (evt) => {
     evt.preventDefault();
-    setLocation(`/gifs/${keywordInput}`);
+    setLocation(`/giffy-app/gifs/${keywordInput}`);
   };
 
   return (

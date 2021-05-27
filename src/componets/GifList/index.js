@@ -9,7 +9,7 @@ export default function GifList({ keyword, url, title }) {
 
   return (
     <div className="containerGifList">
-      <h2 className="tittleGifList">{title}</h2>
+      <h2 className="tittleGifList">{decodeURI(title)}</h2>
       <div className="wrpaListOfGifs">
         {loading ? (
           <Spinner />

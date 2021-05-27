@@ -18,11 +18,11 @@
   text-decoration: none;
   font-size: 2em;
   font-weight: 600;
-  color: var(--colorText);
+  color: var(--colorText2);
 }
 .wrapDarkMode {
   cursor: pointer;
-  color: var(--colorText);
+  color: var(--colorText2);
 }
 .fa-sun {
   margin-right: 5px;

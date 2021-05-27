@@ -5,7 +5,6 @@
 }
 body {
   scroll-behavior: smooth;
-
   background-color: var(--colorBodyBackgrund);
 }
 body::-webkit-scrollbar {
@@ -22,6 +21,7 @@ body.isDarkMode {
   --colorBackgroungItems: #6200ed;
   --colorBodyBackgrund: #ffffff;
   --colorText: #262626;
+  --colorText2: #e2e2e2;
   --colorSpinner: #09f;
   transition: 0.3s ease all;
 }

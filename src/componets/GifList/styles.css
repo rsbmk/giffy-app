@@ -1,7 +1,7 @@
 .containerGifList {
   padding: 0 1em;
-
   margin-bottom: 1em;
+  flex-grow: 2;
 }
 .tittleGifList {
   text-transform: capitalize;
@@ -9,7 +9,7 @@
   color: var(--colorText);
 }
 .wrpaListOfGifs {
-  height: 100vh;
+  min-height: 110vh;
   display: grid;
   grid-auto-flow: row dense;
   grid-template-columns: repeat(auto-fit, minMax(150px, 1fr));
@@ -27,7 +27,7 @@
 
 .wrapImgGif:nth-child(8n + 1) {
   grid-column-end: span 2;
-  grid-row-end: span 2;
+  grid-row-end: span 1;
 }
 
 .wrapImgGif:nth-child(10n + 3) {

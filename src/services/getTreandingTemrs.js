@@ -1,5 +1,4 @@
-import { API_URL } from "../services/settings";
-import { API_KEY } from "../services/settings";
+import { API_URL, API_KEY } from "../services/settings";
 
 export default function getTreandingTerms() {
   const topics = fetch(`${API_URL}/trending/searches?api_key=${API_KEY}`)

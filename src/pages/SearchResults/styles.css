@@ -1,0 +1,17 @@
+.wrapSearchResults {
+  padding-bottom: 3em;
+}
+.botton {
+  padding: 15px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 05px 0 rgba(0, 0, 0, 0.3);
+}
+.botton:hover {
+  transition: 0.4s all ease;
+  color: var(--colorText2);
+  background-color: var(--colorBackgroungItems);
+}

@@ -1,20 +1,13 @@
-import { API_URL } from "../services/settings";
-import { API_KEY } from "../services/settings";
+import { useApiUrl } from "../services/settings";
 
-export default function getGifs(keyword, url) {
-  if (keyword && !url) {
-    const gifs = fetch(
-      `${API_URL}/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=25&offset=0&rating=g&lang=en`
-    )
-      .then((response) => response.json())
-      .then((data) => responseApi(data));
-    return gifs;
-  } else if (!keyword && url) {
-    const gifs = fetch(url)
-      .then((response) => response.json())
-      .then((data) => responseApi(data));
-    return gifs;
-  }
+export default function GetGifs(keyword) {
+  const { $api_url } = useApiUrl(keyword);
+
+  const gifs = fetch($api_url)
+    .then((response) => response.json())
+    .then(responseApi);
+
+  return gifs;
 }
 
 const responseApi = (resApi) => {

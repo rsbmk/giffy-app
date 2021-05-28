@@ -4,12 +4,19 @@ import { Gif } from "../Gif";
 import Spinner from "../Spinner";
 import "./styles.css";
 
-export default function GifList({ keyword, url, title }) {
-  const { gifs, loading } = useGifsSearch(keyword, url);
+export default function GifList({ keyword }) {
+  const { gifs, loading } = useGifsSearch(keyword);
 
   return (
     <div className="containerGifList">
-      <h2 className="tittleGifList">{decodeURI(title)}</h2>
+      {keyword ? (
+        <h2 className="tittleGifList">{decodeURI(keyword)}</h2>
+      ) : (
+        <h2 className="tittleGifList">
+          Trending <i className="fas fa-chart-line"></i>
+        </h2>
+      )}
+
       <div className="wrpaListOfGifs">
         {loading ? (
           <Spinner />

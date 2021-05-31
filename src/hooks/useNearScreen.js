@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function useNearScrean() {
+export default function useNearScrean({once = true}= {}) {
   const [isNearScreen, setShow] = useState(false);
   const elementOfObserver = useRef();
 
@@ -9,12 +9,14 @@ export default function useNearScrean() {
       const element = entries[0];
       if (element.isIntersecting) {
         setShow(true);
-        observer.disconnect();
+        once && observer.disconnect();
+      }else{
+        !once && setShow(false)
       }
     };
 
     const observer = new IntersectionObserver(handleOnChange, {
-      rootMargin: "100px",
+      rootMargin: "200px",
     });
 
     observer.observe(elementOfObserver.current);

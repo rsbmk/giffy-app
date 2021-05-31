@@ -6,13 +6,13 @@ import TreandingTerms from "../../componets/TrendingSearches";
 
 export function Home() {
   return (
-    <>
+    <div>
       <Header />
       <div className="wrpaHome">
         <GifList />
         <TreandingTerms />
       </div>
-    </>
+    </div>
   );
 }
 

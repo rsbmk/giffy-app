@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { GifsContextProvider } from "./context/GifsContext";
 import { Route } from "wouter";

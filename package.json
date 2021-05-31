@@ -8,9 +8,11 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "gh-pages": "^3.1.0",
+    "just-debounce-it": "^1.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-scripts": "^1.1.5",
     "web-vitals": "^1.1.2",
     "wouter": "^2.7.4"
   },
@@ -25,7 +27,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:react-hooks/recommended"
     ]
   },
   "browserslist": {
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "eslint": "^7.26.0",
-    "eslint-plugin-react": "^7.23.2"
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

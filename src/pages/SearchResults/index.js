@@ -10,6 +10,7 @@ export function SearchResults({ params }) {
   const { setPage } = useGifsSearch(params.keyword);
   const {isNearScreen, elementOfObserver } = useNearScrean({once: false})
  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceHandleNextPage = useCallback(debounce(
     () => setPage((prePage) => prePage + 1), 500
   ),[]) 

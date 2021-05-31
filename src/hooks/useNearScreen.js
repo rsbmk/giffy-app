@@ -22,7 +22,7 @@ export default function useNearScrean({once = true}= {}) {
     observer.observe(elementOfObserver.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [once]);
 
   return { isNearScreen, elementOfObserver };
 }

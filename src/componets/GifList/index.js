@@ -1,10 +1,10 @@
 import React from "react";
 import useGifsSearch from "../../hooks/useGifsSearch";
-import { Gif } from "../Gif";
+import Gif from "../Gif";
 import Spinner from "../Spinner";
 import "./styles.css";
 
-export default function GifList({ keyword }) {
+ function GifList({ keyword }) {
   const { gifs, loading } = useGifsSearch(keyword);
 
   return (
@@ -36,3 +36,4 @@ export default function GifList({ keyword }) {
     </div>
   );
 }
+export default React.memo(GifList)

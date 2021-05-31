@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Gif } from "../../componets/Gif";
+import Gif from "../../componets/Gif";
 import Header from "../../componets/Header";
 import GifsContext from "../../context/GifsContext";
 import "./style.css";

@@ -29,4 +29,4 @@ export function SearchResults({ params }) {
   );
 }
 
-export default SearchResults;
+export default React.memo(SearchResults);

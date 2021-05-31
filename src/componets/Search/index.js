@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useLocation } from "wouter";
 import "./styles.css";
 
@@ -7,13 +7,14 @@ export default function Search() {
   // eslint-disable-next-line no-unused-vars
   const [location, setLocation] = useLocation();
 
-  const handleChange = (evt) => {
+  const handleChange = useCallback((evt) => {
     setKeywordInput(evt.target.value);
-  };
-  const handleSumbit = (evt) => {
+  },[]);
+
+  const handleSumbit = useCallback((evt) => {
     evt.preventDefault();
     setLocation(`/giffy-app/gifs/${keywordInput}`);
-  };
+  },[setLocation,keywordInput]);
 
   return (
     <form

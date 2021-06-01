@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/giffy-app/static/css/main.991a1f31.chunk.css",
-    "main.js": "/giffy-app/static/js/main.db0a3093.chunk.js",
-    "main.js.map": "/giffy-app/static/js/main.db0a3093.chunk.js.map",
-    "runtime-main.js": "/giffy-app/static/js/runtime-main.950b5aac.js",
-    "runtime-main.js.map": "/giffy-app/static/js/runtime-main.950b5aac.js.map",
-    "static/js/2.8e0100ec.chunk.js": "/giffy-app/static/js/2.8e0100ec.chunk.js",
-    "static/js/2.8e0100ec.chunk.js.map": "/giffy-app/static/js/2.8e0100ec.chunk.js.map",
+    "main.js": "/giffy-app/static/js/main.b6a022e2.chunk.js",
+    "main.js.map": "/giffy-app/static/js/main.b6a022e2.chunk.js.map",
+    "runtime-main.js": "/giffy-app/static/js/runtime-main.62758e30.js",
+    "runtime-main.js.map": "/giffy-app/static/js/runtime-main.62758e30.js.map",
+    "static/js/2.b8759cdd.chunk.js": "/giffy-app/static/js/2.b8759cdd.chunk.js",
+    "static/js/2.b8759cdd.chunk.js.map": "/giffy-app/static/js/2.b8759cdd.chunk.js.map",
     "static/css/3.64821ce1.chunk.css": "/giffy-app/static/css/3.64821ce1.chunk.css",
-    "static/js/3.95981719.chunk.js": "/giffy-app/static/js/3.95981719.chunk.js",
-    "static/js/3.95981719.chunk.js.map": "/giffy-app/static/js/3.95981719.chunk.js.map",
+    "static/js/3.2b130472.chunk.js": "/giffy-app/static/js/3.2b130472.chunk.js",
+    "static/js/3.2b130472.chunk.js.map": "/giffy-app/static/js/3.2b130472.chunk.js.map",
     "static/js/4.6015b774.chunk.js": "/giffy-app/static/js/4.6015b774.chunk.js",
     "static/js/4.6015b774.chunk.js.map": "/giffy-app/static/js/4.6015b774.chunk.js.map",
     "index.html": "/giffy-app/index.html",
     "static/css/3.64821ce1.chunk.css.map": "/giffy-app/static/css/3.64821ce1.chunk.css.map",
     "static/css/main.991a1f31.chunk.css.map": "/giffy-app/static/css/main.991a1f31.chunk.css.map",
-    "static/js/2.8e0100ec.chunk.js.LICENSE.txt": "/giffy-app/static/js/2.8e0100ec.chunk.js.LICENSE.txt"
+    "static/js/2.b8759cdd.chunk.js.LICENSE.txt": "/giffy-app/static/js/2.b8759cdd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.950b5aac.js",
-    "static/js/2.8e0100ec.chunk.js",
+    "static/js/runtime-main.62758e30.js",
+    "static/js/2.b8759cdd.chunk.js",
     "static/css/main.991a1f31.chunk.css",
-    "static/js/main.db0a3093.chunk.js"
+    "static/js/main.b6a022e2.chunk.js"
   ]
 }

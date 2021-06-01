@@ -11,9 +11,8 @@ import { Redirect } from "wouter";
 import { Helmet } from "react-helmet"
 
  function DetailGif({ params }) {
-  const {gif, loading, IsError} = useCallSigleGif({id: params.id})
 
-  console.log(gif);
+  const {gif, loading, IsError} = useCallSigleGif({id: params.id})
 
   if (loading){
      return (
@@ -43,4 +42,6 @@ import { Helmet } from "react-helmet"
   );
 }
 
-export default React.memo(DetailGif)
+export default React.memo(DetailGif, ((preProps, nextProps) =>{
+return preProps.id === nextProps.id
+}))

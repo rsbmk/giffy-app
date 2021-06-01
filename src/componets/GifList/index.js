@@ -4,7 +4,7 @@ import Gif from "../Gif";
 import Spinner from "../Spinner";
 import "./styles.css";
 
- function GifList({ keyword }) {
+function GifList({ keyword }) {
   const { gifs, loading } = useGifsSearch(keyword);
 
   return (
@@ -36,4 +36,4 @@ import "./styles.css";
     </div>
   );
 }
-export default React.memo(GifList)
+export default React.memo(GifList);

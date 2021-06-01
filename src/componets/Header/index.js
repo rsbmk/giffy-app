@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import Search from "../Search";
-import DarkMode from '../DarkMode'
+import DarkMode from "../DarkMode";
 import "./styles.css";
 
 export function Header() {

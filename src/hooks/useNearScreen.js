@@ -11,7 +11,7 @@ export default function useNearScrean({once = true}= {}) {
         setShow(true);
         once && observer.disconnect();
       }else{
-        !once && setShow(false)
+        !once && setShow(false);
       }
     };
 

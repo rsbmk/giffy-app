@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "wouter";
 import "./styles.css";
 
- function Gif({ title, url, id }) {
+function Gif({ title, url, id }) {
   return (
     <Link to={`/giffy-app/gifs/detail/${id}`}>
       <div className="wrapImgGif">
@@ -11,4 +11,4 @@ import "./styles.css";
     </Link>
   );
 }
-export default React.memo(Gif)
+export default React.memo(Gif);

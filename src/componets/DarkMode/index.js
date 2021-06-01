@@ -1,9 +1,9 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useState } from "react";
 
 function DarkMode() {
   const [stateDarkMode, setStateDarkMode] = useState(false);
 
-const handleClick = useCallback(() => {
+  const handleClick = useCallback(() => {
     const tagBody = document.body.classList;
     tagBody.toggle("isDarkMode");
     setStateDarkMode(tagBody.contains("isDarkMode"));
@@ -18,7 +18,7 @@ const handleClick = useCallback(() => {
       )}
       DarkMode
     </div>
-  )
+  );
 }
 
-export default DarkMode
+export default DarkMode;

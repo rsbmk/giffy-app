@@ -1,21 +1,38 @@
 import React from "react";
-import Gif from "../../componets/Gif";
-import Header from "../../componets/Header";
-import useCallSigleGif from "../../hooks/useCallSigleGif";
-import Spinner from "../../componets/Spinner"
 import "./style.css";
+
+import Gif from "componets/Gif";
+import Header from "componets/Header";
+import Spinner from "componets/Spinner"
+
+import useCallSigleGif from "hooks/useCallSigleGif";
+
 import { Redirect } from "wouter";
+import { Helmet } from "react-helmet"
 
-export default function DetailGif({ params }) {
+ function DetailGif({ params }) {
 
-const {gif, loading, IsError} = useCallSigleGif({id: params.id})
+  const {gif, loading, IsError} = useCallSigleGif({id: params.id})
 
-  if (loading) return <Spinner/>
+  if (loading){
+     return (
+     <>
+     <Helmet>
+       <title>Cargando...</title>
+     </Helmet>
+       <Spinner/>
+     </>
+     )
+  }
+
   if (IsError) return <Redirect to={"/giffy-app/"}/>
   if (!gif) return null
 
   return (
     <div>
+      <Helmet>
+        <title>{gif.title} | Giffy</title>
+      </Helmet>
       <Header />
       <div className="containerGifDetali">
          <h2 className="titleGifDetail">{gif.title}</h2>
@@ -24,3 +41,7 @@ const {gif, loading, IsError} = useCallSigleGif({id: params.id})
     </div>
   );
 }
+
+export default React.memo(DetailGif, ((preProps, nextProps) =>{
+return preProps.id === nextProps.id
+}))

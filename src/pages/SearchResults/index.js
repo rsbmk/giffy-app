@@ -1,10 +1,14 @@
 import React, { useCallback, useEffect } from "react";
 import "./styles.css";
-import GifList from "../../componets/GifList";
-import Header from "../../componets/Header";
-import useGifsSearch from "../../hooks/useGifsSearch";
-import useNearScrean from "../../hooks/useNearScreen";
+
+import GifList from "componets/GifList";
+import Header from "componets/Header";
+
+import useGifsSearch from "hooks/useGifsSearch";
+import useNearScrean from "hooks/useNearScreen";
+
 import debounce from "just-debounce-it";
+import { Helmet } from "react-helmet";
 
 export function SearchResults({ params }) {
   const { setPage } = useGifsSearch(params.keyword);
@@ -22,6 +26,10 @@ export function SearchResults({ params }) {
 
   return (
     <div className="wrapSearchResults">
+      <Helmet>
+        <title>Results of {decodeURI(params.keyword)}</title>
+        <meta name="description" content={`This page is show the results on search ${decodeURI(params.keyword)}`} /> 
+      </Helmet>
       <Header />
       <GifList keyword={params.keyword} />
       <div ref={elementOfObserver}/>

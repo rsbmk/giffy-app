@@ -10,8 +10,8 @@ function App() {
   return (
     <GifsContextProvider>
       <Route path="/giffy-app/" component={Home} />
-      <Route path="/giffy-app/gifs/:keyword" component={SearchResults} />
-      <Route path="/giffy-app/gifs/detail/:id" component={DetailGif} />
+      <Route path="/giffy-app/search/:keyword" component={SearchResults} />
+      <Route path="/giffy-app/search/detail/gif/:id" component={DetailGif} />
     </GifsContextProvider>
   );
 }

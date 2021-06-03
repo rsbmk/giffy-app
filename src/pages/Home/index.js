@@ -6,9 +6,13 @@ import Header from "componets/Header";
 import TreandingTerms from "componets/TrendingSearches";
 
 import { Helmet } from "react-helmet";
+import useGifsSearch from "hooks/useGifsSearch";
 
 
 export function Home() {
+
+ const { gifs, loading } = useGifsSearch()
+
   return (
     <div>
       <Helmet>
@@ -17,7 +21,7 @@ export function Home() {
       </Helmet>
       <Header />
       <div className="wrpaHome">
-        <GifList />
+        <GifList gifList={gifs} loading={loading} />
         <TreandingTerms />
       </div>
     </div>

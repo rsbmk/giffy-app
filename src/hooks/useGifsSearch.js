@@ -5,10 +5,10 @@ import GifsContext from "../context/GifsContext";
 const INITIAL_PAGE = 0;
 
 export default function useGifsSearch(keyword) {
+
   const { gifs, setGifs } = useContext(GifsContext);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(INITIAL_PAGE);
-
   useEffect(
     function () {
       setLoading(true);

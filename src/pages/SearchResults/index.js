@@ -11,7 +11,7 @@ import debounce from "just-debounce-it";
 import { Helmet } from "react-helmet";
 
 export function SearchResults({ params }) {
-  const { setPage } = useGifsSearch(params.keyword);
+  const { gifs, loading, setPage } = useGifsSearch(params.keyword);
   const {isNearScreen, elementOfObserver } = useNearScrean({once: false});
  
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,7 +31,7 @@ export function SearchResults({ params }) {
         <meta name="description" content={`This page is show the results on search ${decodeURI(params.keyword)}`} /> 
       </Helmet>
       <Header />
-      <GifList keyword={params.keyword} />
+      <GifList keyword={params.keyword} gifList={gifs} loading={loading} />
       <div ref={elementOfObserver}/>
     </div>
   );

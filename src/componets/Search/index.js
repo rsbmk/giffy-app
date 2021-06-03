@@ -13,8 +13,8 @@ export default function Search() {
 
   const handleSumbit = useCallback((evt) => {
     evt.preventDefault();
-    setLocation(`/giffy-app/gifs/${keywordInput}`);
-  },[setLocation,keywordInput]);
+    setLocation(`/giffy-app/search/${keywordInput}`);
+  },[setLocation, keywordInput]);
 
   return (
     <form

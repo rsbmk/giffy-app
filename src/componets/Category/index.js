@@ -9,7 +9,7 @@ export default function Category({ options }) {
       <div className="wrap-topics">
         {options.map((topics) => {
           return (
-            <Link to={`/giffy-app/gifs/${topics}`} key={topics}>
+            <Link to={`/giffy-app/search/${topics}`} key={topics}>
               {topics}{" "}
             </Link>
           );

@@ -1,12 +1,9 @@
 import React from "react";
-import useGifsSearch from "../../hooks/useGifsSearch";
 import Gif from "../Gif";
 import Spinner from "../Spinner";
 import "./styles.css";
 
-function GifList({ keyword }) {
-  const { gifs, loading } = useGifsSearch(keyword);
-
+function GifList({ keyword, gifList, loading}) {
   return (
     <div className="containerGifList">
       {keyword ? (
@@ -21,7 +18,7 @@ function GifList({ keyword }) {
         {loading ? (
           <Spinner />
         ) : (
-          gifs.map((gifs) => {
+          gifList.map((gifs) => {
             return (
               <Gif
                 key={gifs.id}

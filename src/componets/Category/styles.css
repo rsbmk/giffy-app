@@ -12,8 +12,8 @@
   padding: 0 5px;
 }
 .wrap-topics a:hover {
-  color: var(--colorText2);
-  background-color: var(--colorBackgroungItems);
+  color: var(--colorText);
+  background-color: var(--colorSpinner);
   transition: 0.4s all ease;
   border-radius: 30px;
 }

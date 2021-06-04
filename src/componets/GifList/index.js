@@ -1,10 +1,13 @@
 import React from "react";
-import Gif from "../Gif";
-import Spinner from "../Spinner";
 import "./styles.css";
 
+import Gif from "../Gif";
+import Spinner from "../Spinner";
+
 function GifList({ keyword, gifList, loading}) {
+  
   return (
+    
     <div className="containerGifList">
       {keyword ? (
         <h2 className="tittleGifList">{decodeURI(keyword)}</h2>
@@ -33,4 +36,7 @@ function GifList({ keyword, gifList, loading}) {
     </div>
   );
 }
-export default React.memo(GifList);
+export default React.memo(GifList, (preProps, nextProps) => {
+
+ return (preProps.gifList === nextProps.gifList && preProps.loading === nextProps.loading)
+});

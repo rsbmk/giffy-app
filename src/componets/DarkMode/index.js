@@ -21,4 +21,4 @@ function DarkMode() {
   );
 }
 
-export default DarkMode;
+export default React.memo(DarkMode);

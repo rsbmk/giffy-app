@@ -1,35 +1,32 @@
 .wrapInputSearch {
   border-radius: 6px;
-  width: 70%;
-  margin: 0 auto;
-  border: 1px solid var(--colorText2);
+  min-height: 5vh;
+  max-width: 90vw;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(auto-fit, minMax(3em, 1fr));
+  grid-auto-rows: minMax(1em, auto);
 }
-.inputSearch {
-  border: none;
-  color: var(--colorText2);
-  background-color: var(--colorBackgroungItems);
-}
-.inputSearch::-webkit-input-placeholder {
-  color: var(--colorText2);
-}
-.inputSearch:focus {
-  outline: none;
+.wrapForm{
+  display: flex;
+  justify-content: center;
 }
 .fa-search {
   padding: 0 7px;
   color: var(--colorText2);
 }
+.button{
+  border: none;
+  cursor: pointer;
+  border-radius: 8px 0 0 8px;
+  padding: 2px;
+  background-color: var(--colorSpinner);
+}
 
 @media screen and (min-width: 1000px) {
-  .wrapInputSearch {
-    width: 20%;
+  .wrapForm {
     position: absolute;
-    top: 30px;
-    left: 250px;
-  }
-}
-@media screen and (min-width: 800px) {
-  .wrapInputSearch {
-    width: 50%;
+    top: 35px;
+    left: 25%;
   }
 }

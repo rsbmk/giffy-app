@@ -4,10 +4,12 @@
   align-items: center;
   height: 3em;
   margin-bottom: 0.7em;
+  padding: 2em 0;
   background-color: var(--colorBackgroungItems);
   /*   border: 1px solid red; */
 }
 .containerHeader {
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.3);
   background-color: var(--colorBackgroungItems);
   margin-bottom: 1.5em; /* 
   border: 1px solid green; */
@@ -16,13 +18,17 @@
 .title {
   cursor: pointer;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 600;
-  color: var(--colorText2);
+  color: var(--colorSpinner);
 }
 .wrapDarkMode {
   cursor: pointer;
-  color: var(--colorText2);
+  color: var(--colorText);
+}
+.wrapDarkMode:hover{
+  color: var(--colorSpinner);
+  transition: .3s all ease;
 }
 .fa-sun {
   margin-right: 5px;
@@ -36,11 +42,11 @@
     /*  padding: 0.7em 3em; */
     position: relative;
     margin: 0 4em;
-    height: 12vh;
+    height: 15vh;
     justify-content: space-between;
   }
   .title {
-    font-size: 3em;
+    font-size: 4em;
   }
   .containerHeader {
     padding-bottom: 0;

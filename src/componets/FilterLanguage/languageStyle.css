@@ -1,0 +1,12 @@
+.FilterLanguage{
+  width: 7em;
+  margin: 0 5px;
+  cursor: pointer;
+  color: var(--colorText);
+  border: 1px solid var(--colorText);
+  border-radius: 8px;
+  background-color: var(--colorBackgroungItems);
+}
+.FilterLanguage:focus{
+  outline: none;
+}

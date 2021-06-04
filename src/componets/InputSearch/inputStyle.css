@@ -1,0 +1,14 @@
+.inputSearch {
+  grid-column: span 3;
+  color: var(--colorText);
+  border: 1px solid var(--colorText);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  background-color: var(--colorBackgroungItems);
+}
+.inputSearch::-webkit-input-placeholder {
+  color: var(--colorText);
+}
+.inputSearch:focus {
+  outline: none;
+}

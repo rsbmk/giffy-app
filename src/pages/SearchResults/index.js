@@ -1,17 +1,20 @@
 import React, { useCallback, useEffect } from "react";
 import "./styles.css";
 
-import GifList from "componets/GifList";
-import Header from "componets/Header";
-
 import useGifsSearch from "hooks/useGifsSearch";
 import useNearScrean from "hooks/useNearScreen";
 
 import debounce from "just-debounce-it";
 import { Helmet } from "react-helmet";
 
+const GifList = React.lazy(() => import("componets/GifList"));
+const Header = React.lazy(() => import("componets/Header")) ;
+
 export function SearchResults({ params }) {
-  const { gifs, loading, setPage } = useGifsSearch(params.keyword);
+
+  const {keyword, rating, language} = params
+
+  const { gifs, loading, setPage } = useGifsSearch(keyword, rating, language);
   const {isNearScreen, elementOfObserver } = useNearScrean({once: false});
  
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,14 +30,16 @@ export function SearchResults({ params }) {
   return (
     <div className="wrapSearchResults">
       <Helmet>
-        <title>Results of {decodeURI(params.keyword)}</title>
-        <meta name="description" content={`This page is show the results on search ${decodeURI(params.keyword)}`} /> 
+        <title>Results of {decodeURI(keyword)}</title>
+        <meta name="description" content={`This page is show the results on search ${decodeURI(keyword)}`} /> 
       </Helmet>
       <Header />
-      <GifList keyword={params.keyword} gifList={gifs} loading={loading} />
+      <GifList keyword={keyword} gifList={gifs} loading={loading} />
       <div ref={elementOfObserver}/>
     </div>
   );
 }
 
-export default React.memo(SearchResults);
+export default React.memo(SearchResults, (preProps, nextProps) => {
+return preProps.params.keyword === nextProps.params.keyword && preProps.params.rating === nextProps.params.rating
+});

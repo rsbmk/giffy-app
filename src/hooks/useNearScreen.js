@@ -16,7 +16,7 @@ export default function useNearScrean({once = true}= {}) {
     };
 
     const observer = new IntersectionObserver(handleOnChange, {
-      rootMargin: "200px",
+      rootMargin: "200px"
     });
 
     observer.observe(elementOfObserver.current);

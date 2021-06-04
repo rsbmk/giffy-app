@@ -1,8 +1,10 @@
 import React from "react";
+import "./headerStyles.css";
+
 import { Link } from "wouter";
-import Search from "../Search";
-import DarkMode from "../DarkMode";
-import "./styles.css";
+
+const Search = React.lazy(()=> import("../Search")) ;
+const DarkMode = React.lazy(()=> import("../DarkMode")) ;
 
 export function Header() {
   return (

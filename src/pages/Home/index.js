@@ -5,11 +5,11 @@ import GifList from "componets/GifList";
 import Header from "componets/Header";
 import TreandingTerms from "componets/TrendingSearches";
 
-import { Helmet } from "react-helmet";
 import useGifsSearch from "hooks/useGifsSearch";
 
+import { Helmet } from "react-helmet";
 
-export function Home() {
+ function Home() {
 
  const { gifs, loading } = useGifsSearch()
 
@@ -28,4 +28,4 @@ export function Home() {
   );
 }
 
-export default Home;
+export default React.memo(Home);

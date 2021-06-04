@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "wouter";
 import "./styles.css";
 
-export default function Category({ options }) {
+function Category({ options }) {
   return (
     <div className="wrap-categori-TrendigTopics">
       <h2 className="tittleTopics">Trending Topics</h2>
@@ -18,3 +18,6 @@ export default function Category({ options }) {
     </div>
   );
 }
+export default React.memo(Category, (preProps, nextProps) =>{
+  return preProps.options === nextProps.options
+})

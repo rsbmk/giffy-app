@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import getTreandingTerms from "../../services/getTreandingTemrs";
-import Category from "../Category";
+const Category = React.lazy(()=> import("../Category"))
 
-export default function TreandingTopics() {
+ function TreandingTopics() {
   const [trends, setTrends] = useState([]);
 
   useEffect(function () {
@@ -11,3 +11,4 @@ export default function TreandingTopics() {
 
   return <Category options={trends} />;
 }
+export default React.memo(TreandingTopics)

@@ -1,7 +1,7 @@
 import { useApiUrl } from "../services/settings";
 
-export default function GetGifs(keyword, page) {
-  const { $api_url } = useApiUrl(keyword, page);
+export default function GetGifs({keyword, page, rating, language}) {
+  const { $api_url } = useApiUrl(keyword, page, rating, language);
 
   const gifs = fetch($api_url)
     .then((response) => response.json())

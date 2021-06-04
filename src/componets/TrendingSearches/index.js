@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import useNearScrean from "../../hooks/useNearScreen";
 const TreandingTopics = React.lazy(() => import("../TrendingTopics"));
 
-export default function LeazyTrending() {
+function LeazyTrending() {
   const { isNearScreen, elementOfObserver } = useNearScrean();
 
   return (
@@ -13,3 +13,4 @@ export default function LeazyTrending() {
     </div>
   );
 }
+export default React.memo(LeazyTrending)

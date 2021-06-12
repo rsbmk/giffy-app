@@ -1,0 +1,25 @@
+.switch{
+  display: block;
+  width: 60px;
+  height: 26px;
+  padding: 3px 0 0 3px;
+  background-color: var(--colorSpinner);
+  border-radius: 15px;
+  user-select: none;
+}
+.switch::before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--colorBackgroungItems);
+  border-radius: 50%;
+  transform: translateX(0);
+  transition: .2s all ease-out;
+}
+#checkbox:checked ~ .switch::before{
+  transform: translateX(35px);
+}
+#checkbox{
+  display: none;
+}

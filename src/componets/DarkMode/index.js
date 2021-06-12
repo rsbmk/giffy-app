@@ -1,23 +1,28 @@
-import React, { useCallback, useState } from "react";
+import React, { useEffect, useState } from "react";
+import './darkMode.css';
 
 function DarkMode() {
-  const [stateDarkMode, setStateDarkMode] = useState(false);
+  const [isDarkMode, setDarkMode] = useState(false);
 
-  const handleClick = useCallback(() => {
+  const handleClickDarkMode = () => {
     const tagBody = document.body.classList;
     tagBody.toggle("isDarkMode");
-    setStateDarkMode(tagBody.contains("isDarkMode"));
-  },[]);
+    setDarkMode(tagBody.contains("isDarkMode"));
+  };
+
+  useEffect(function(){
+    const { matches } = window.matchMedia('(prefers-color-scheme: dark)')
+    if (matches) {
+      setDarkMode(true)
+      document.body.classList.add('isDarkMode')
+    }
+  },[])
 
   return(
-    <div className="wrapDarkMode" onClick={handleClick}>
-      {stateDarkMode ? (
-        <i className="fas fa-sun" />
-      ) : (
-        <i className="far fa-moon" />
-      )}
-      DarkMode
-    </div>
+    <>
+      <input  checked={isDarkMode}  id='checkbox' type='checkbox'/> 
+      <label onClick={handleClickDarkMode} className='switch' htmlFor='checkbox'/>
+    </>
   );
 }
 

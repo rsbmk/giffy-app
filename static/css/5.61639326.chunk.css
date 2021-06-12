@@ -1,0 +1,2 @@
+.switch{display:block;width:60px;height:26px;padding:3px 0 0 3px;background-color:var(--colorSpinner);border-radius:15px;-webkit-user-select:none;-ms-user-select:none;user-select:none}.switch:before{content:"";display:block;width:20px;height:20px;background-color:var(--colorBackgroungItems);border-radius:50%;-webkit-transform:translateX(0);transform:translateX(0);transition:all .2s ease-out}#checkbox:checked~.switch:before{-webkit-transform:translateX(35px);transform:translateX(35px)}#checkbox{display:none}
+/*# sourceMappingURL=5.61639326.chunk.css.map */
